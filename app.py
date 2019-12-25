@@ -31,7 +31,7 @@ api = Api(app) #to handle the resources easily get,post etc
 def create_tables():
 	db.create_all()
 
-
+#uwsgi helps our flask app to interact with othe things
 
 jwt = JWT(app,authentication,identity) #all three thing will be sed for the authentication of users 
 

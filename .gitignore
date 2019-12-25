@@ -1,3 +1,5 @@
 create_user_table.py
 __pycache__/
 *.pyc
+
+#also git add .gitignore
