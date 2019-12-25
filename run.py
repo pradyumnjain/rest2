@@ -1,7 +1,7 @@
 from app import app
 from db import db
 
-db.init(app)
+db.init_app(app)
 
 #this is because now we are running this app from uwsgi
 #and now __name__ == '__main__': will not be executed 
