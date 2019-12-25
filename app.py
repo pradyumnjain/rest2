@@ -15,7 +15,7 @@ from resources.store import Store,StoreList
 
 
 app = Flask(__name__) #resource is just a thing you api can be mapped to that the subject of data
-db.init_app(app)
+# db.init_app(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
