@@ -17,7 +17,15 @@ from resources.store import Store,StoreList
 app = Flask(__name__) #resource is just a thing you api can be mapped to that the subject of data
 # db.init_app(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+#when we use database add on heroku it sets an environment variable
+#the variable is known by the system it is created on
+
+import os
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
+
+
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = "kushal" #secrete key for api authentication
